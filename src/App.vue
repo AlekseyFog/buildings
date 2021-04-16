@@ -1,32 +1,75 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+    <MenuModal
+      v-if="menuIsVisible"
+      @close="hideMenu"
+    />
+    <div
+      class="default-layout"
+      :class="[
+        menuIsVisible && 'default-layout_locked'
+      ]"
+    >
+      <Header />
+      <MenuMobileButton
+        class="header__menu_mobile"
+        @show-menu="setMenuIsVisible"
+      />
+      <Nav />
+      <router-view />
+      <Footer />
     </div>
-    <router-view/>
   </div>
 </template>
 
+<script>
+import Header from '@/components/header/Header';
+import Nav from '@/components/menu/Nav';
+import Footer from '@/components/footer/Footer';
+import MenuModal from '@/components/menu/MenuModal';
+import MenuMobileButton from '@/components/menu/MenuMobileButton';
+
+export default {
+  components: {
+    Footer,
+    MenuMobileButton,
+    Nav,
+    Header,
+    MenuModal,
+  },
+  data() {
+    return {
+      menuIsVisible: false,
+    };
+  },
+  methods: {
+    setMenuIsVisible() {
+      this.menuIsVisible = true;
+    },
+    hideMenu() {
+      this.menuIsVisible = false;
+    },
+  },
+};
+
+</script>
+<style lang="scss" src="./assets/styles/base-style.scss"/>
 <style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+.default-layout_locked {
+  position: fixed;
+  top: 0;
+  left: 0;
 }
-
-#nav {
-  padding: 30px;
-
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
-    }
+.header__menu_mobile {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  width: 30px;
+  height: 30px;
+}
+@media (min-width: 576px) {
+  .header__menu_mobile{
+    display: none;
   }
 }
 </style>
