@@ -25,6 +25,7 @@ export default {
 
 <style scoped>
 .header__menu_button{
+  z-index: 999;
   border: none;
   background: none;
 }

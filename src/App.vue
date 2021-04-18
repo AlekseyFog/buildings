@@ -67,7 +67,7 @@ export default {
   width: 30px;
   height: 30px;
 }
-@media (min-width: 576px) {
+@media (min-width: 768px) {
   .header__menu_mobile{
     display: none;
   }

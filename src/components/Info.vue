@@ -1,20 +1,31 @@
 <template>
   <div class="info">
-    <h2 class="phone info__item">
+    <h2 class="info__item">
       +7(953)354-56-99
     </h2>
     <h2 class="info__item">
       email@example.com
     </h2>
     <h2 class="info__item">
-      Saint-Petersburg, Kosmonavtov ave, 55
+      Saint-Petersburg, kosmonavtov ave, 55
     </h2>
+    <a
+      href="tel:+79533545699"
+      class="mobile_icon"
+    >
+      <PhoneIcon />
+    </a>
   </div>
 </template>
 
 <script>
+import PhoneIcon from '@/assets/svg/phoneicon.svg';
+
 export default {
   name: 'Info',
+  components: {
+    PhoneIcon,
+  },
 };
 </script>
 
@@ -29,23 +40,25 @@ h2 {
   justify-content: space-between;
   align-items: center;
 }
-.phone{
-  display: block!important;
-  width: 100px;
-  margin-top: 10px;
+
+.mobile_icon{
+  display: block;
+  width: 30px;
+  height: 30px;
+  margin-left: 30px;
 }
 
-.info__item{
+.info__item {
   display: none;
 }
 
 @media (min-width: 576px) {
+  .mobile_icon{
+    display: none;
+  }
   .info__item {
     display: block;
     width: 120px;
-  }
-  .phone {
-    margin-top: 0;
   }
 }
 </style>

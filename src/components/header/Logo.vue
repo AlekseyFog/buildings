@@ -20,13 +20,13 @@ export default {
 
 <style lang="scss" scoped>
 .logo{
-  margin-top: 20px;
+  margin-left: 50px;
   display: flex;
   flex-direction: row;
   align-items: center;
 }
 .logo__image{
-  width: 50px;
+  width: 45px;
   height: 50px;
 }
 .logo__name{
@@ -37,6 +37,9 @@ export default {
 @media (min-width: 576px) {
   .logo {
     margin-top: 0;
+  }
+  .logo__image{
+    width: 50px;
   }
 }
 

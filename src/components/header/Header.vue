@@ -21,12 +21,11 @@ export default {
 <style lang="scss" scoped>
 .header {
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 60px;
+  height: 80px;
   width: 100%;
-  padding: 10px 10px 0;
+  padding: 0 10px 0;
 }
 
 @media (min-width: 576px) {

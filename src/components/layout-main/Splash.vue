@@ -22,7 +22,7 @@ export default {
 .splash {
   display: block;
   width: 100%;
-  height: 400px;
+  height: 350px;
   background: url("~@/assets/svg/background.jpeg") no-repeat;
   background-size: cover;
 }
@@ -32,20 +32,19 @@ export default {
   width: 100%;
   height: 100%;
   background: linear-gradient(90deg, rgba(255,255,255,1), rgba(255,255,255,0.6), rgba(255,255,255,0));
-  padding: 70px 40% 50px 70px;
+  padding: 20px;
 }
 
 .splash__text {
-  font-size: 40px;
-  color: #1E3053;
+  font-size: 25px;
+  color: #101010;
 }
 .splash__button{
   position: absolute;
   display: flex;
   align-items: center;
   justify-content: center;
-  bottom: 50px;
-  left: 100px;
+  bottom: 110px;
   background: #F09236;
   color: #1E3053;
   width: 200px;
@@ -60,6 +59,23 @@ export default {
   height: 60px;
   color: #101010;
   transition: all 0.5s ease;
+}
+
+@media (min-width: 576px) {
+  .splash{
+    height: 400px;
+  }
+  .splash__wrap{
+    padding: 70px 40% 50px 70px;
+  }
+.splash__text{
+  font-size: 35px;
+  color: #1E3053;
+}
+.splash__button{
+  bottom: 50px;
+  left: 100px;
+}
 }
 
 </style>

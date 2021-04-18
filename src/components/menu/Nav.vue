@@ -8,37 +8,57 @@
     <div class="menu__item houses">
       <div>Дома</div>
       <div class="houses__menu_item-wrap">
-        <div class="sub__menu_item">
-          Кирпичные дома
-        </div>
-        <div class="sub__menu_item">
-          Дома из газобетона
-        </div>
-        <div class="sub__menu_item">
-          Дома из клееного бруса
-        </div>
-        <div class="sub__menu_item">
-          Дома из профилированного бруса
-        </div>
+        <router-link to="/houses-br">
+          <div class="sub__menu_item">
+            Кирпичные дома
+          </div>
+        </router-link>
+        <router-link to="/houses-gb">
+          <div class="sub__menu_item">
+            Дома из газобетона
+          </div>
+        </router-link>
+        <router-link to="/houses-gl">
+          <div class="sub__menu_item">
+            Дома из клееного бруса
+          </div>
+        </router-link>
+        <router-link to="/houses-pr">
+          <div class="sub__menu_item">
+            Дома из профилированного бруса
+          </div>
+        </router-link>
       </div>
     </div>
     <div class="menu__item">
-      Бани
+      <router-link to="/baths">
+        Бани
+      </router-link>
     </div>
     <div class="menu__item">
-      Фундаменты
+      <router-link to="/foundation">
+        Фундаменты
+      </router-link>
     </div>
     <div class="menu__item">
-      Услуги
+      <router-link to="/services">
+        Услуги
+      </router-link>
     </div>
     <div class="menu__item">
-      О нас
+      <router-link to="/about">
+        О нас
+      </router-link>
     </div>
     <div class="menu__item">
-      Отзывы
+      <router-link to="/reviews">
+        Отзывы
+      </router-link>
     </div>
     <div class="menu__item">
-      Контакты
+      <router-link to="/contacts">
+        Контакты
+      </router-link>
     </div>
     <button class="order_button">
       Заказать звонок
@@ -84,15 +104,17 @@ export default {
 .menu__item:first-child {
   margin-left: 40px;
 }
-.houses__menu_item-wrap{
+
+.houses__menu_item-wrap {
   display: none;
 }
 
-@media (min-width: 576px) {
+@media (min-width: 768px) {
   .nav {
     display: flex;
   }
-  .houses:hover .houses__menu_item-wrap{
+
+  .houses:hover .houses__menu_item-wrap {
     position: absolute;
     display: flex;
     flex-direction: column;
@@ -100,29 +122,34 @@ export default {
     min-width: 250px;
     width: 100px;
     background: #f1f1f1;
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
     z-index: 1;
     padding: 0 10px 10px;
   }
-  .sub__menu_item{
+
+  .sub__menu_item {
     margin-top: 10px;
     white-space: nowrap;
     color: #1E3053;
   }
-  .sub__menu_item:hover{
+
+  .sub__menu_item:hover {
     color: #F09236;
   }
+
   a.router-link-exact-active {
-    color: #F09236!important;
+    color: #F09236 !important;
   }
-  a:visited{
+
+  a:visited {
     color: #ffffff;
   }
-  .order_button{
+
+  .order_button {
     display: block;
     background: #F09236;
     font-size: 13px;
-    color:  #1E3053;
+    color: #1E3053;
     width: 130px;
     height: 40px;
     border-radius: 2px;
@@ -132,7 +159,8 @@ export default {
     margin-right: 50px;
     transition: all 0.5s ease;
   }
-  .order_button:hover{
+
+  .order_button:hover {
     color: #F09236;
     background: #000000;
     transition: all 0.5s ease;
