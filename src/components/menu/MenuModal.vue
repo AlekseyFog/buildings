@@ -180,6 +180,11 @@ export default {
   background: none;
   border: none;
 }
+
+a {
+  text-decoration-color: white;
+}
+
 a.router-link-exact-active {
   color: #F09236 !important;
 }

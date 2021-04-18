@@ -141,6 +141,10 @@ export default {
     color: #F09236 !important;
   }
 
+  a {
+    text-decoration-color: white;
+  }
+
   a:visited {
     color: #ffffff;
   }
