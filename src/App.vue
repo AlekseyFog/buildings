@@ -67,6 +67,9 @@ export default {
   width: 30px;
   height: 30px;
 }
+a {
+  color: white;
+}
 @media (min-width: 768px) {
   .header__menu_mobile{
     display: none;
