@@ -68,7 +68,7 @@ export default {
   height: 30px;
 }
 a {
-  text-decoration-color: white;
+  color: white;
 }
 @media (min-width: 768px) {
   .header__menu_mobile{

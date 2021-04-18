@@ -142,7 +142,7 @@ export default {
   }
 
   a {
-    text-decoration-color: white;
+    color: white;
   }
 
   a:visited {
