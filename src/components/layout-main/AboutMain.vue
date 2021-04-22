@@ -7,7 +7,7 @@
       <p class="about__main__text">
         СтройЭлит – это штат специалистов с более чем 10 летним стажем работы в сфере строительства загородных
         домов. Мы проектируем и строим дома под ключ из:
-        ........................................................................................................................................................................
+        .................
       </p>
       <button class="about__main__button">
         Узнать больше
@@ -25,6 +25,7 @@ export default {
 <style scoped>
 .about__main {
   display: flex;
+  flex-direction: column;
   padding: 20px;
   border-bottom: 1px solid #f9f9f9;
   box-shadow: 0 15px 15px #f9f9f9;
@@ -36,8 +37,13 @@ export default {
 }
 .about__main_content{
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+.about__main__text{
+  width: 100%;
+  font-size: 10px;
 }
 .about__main__button {
   display: flex;
