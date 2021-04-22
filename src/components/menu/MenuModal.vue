@@ -156,6 +156,7 @@ export default {
   min-height: 100vh;
   background: #465162;
   padding: 10px;
+  margin-left: auto;
 }
 
 .menu__header {

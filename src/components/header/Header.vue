@@ -1,31 +1,37 @@
 <template>
   <div class="header">
-    <Logo />
-    <Info />
+    <router-link to="/">
+      <Logo />
+    </router-link>
+    <Menu />
   </div>
 </template>
 
 <script>
 import Logo from '@/components/header/Logo';
-import Info from '@/components/Info';
+import Menu from '@/components/header/Menu';
 
 export default {
   name: 'Header',
   components: {
-    Info,
     Logo,
+    Menu,
   },
 };
 </script>
 
 <style lang="scss" scoped>
 .header {
+  position: sticky;
+  top: 0;
+  z-index: 5;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   height: 80px;
   width: 100%;
-  padding: 0 10px 0;
+  padding: 10px;
+  background: #f9f9f9;
 }
 
 @media (min-width: 576px) {

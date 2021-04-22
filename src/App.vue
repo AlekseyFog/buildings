@@ -15,7 +15,6 @@
         class="header__menu_mobile"
         @show-menu="setMenuIsVisible"
       />
-      <Nav />
       <router-view />
       <Footer />
     </div>
@@ -24,7 +23,6 @@
 
 <script>
 import Header from '@/components/header/Header';
-import Nav from '@/components/menu/Nav';
 import Footer from '@/components/footer/Footer';
 import MenuModal from '@/components/menu/MenuModal';
 import MenuMobileButton from '@/components/menu/MenuMobileButton';
@@ -33,7 +31,6 @@ export default {
   components: {
     Footer,
     MenuMobileButton,
-    Nav,
     Header,
     MenuModal,
   },
@@ -63,14 +60,16 @@ export default {
 .header__menu_mobile {
   position: fixed;
   top: 20px;
-  left: 20px;
+  right: 20px;
   width: 30px;
   height: 30px;
 }
-a {
-  color: white;
+a{
+  text-decoration: none;
+  color: #000000;
 }
-@media (min-width: 768px) {
+
+@media (min-width: 900px) {
   .header__menu_mobile{
     display: none;
   }

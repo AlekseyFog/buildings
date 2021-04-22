@@ -1,50 +1,18 @@
 <template>
   <div class="about__main">
+    <div class="about__main__header">
+      <h3>О компании</h3>
+    </div>
     <div class="about__main_content">
-      <div class="about__main__header">
-        <h3>
-          СтройЭлит
-        </h3>
-        <span>О компании</span>
-      </div>
       <p class="about__main__text">
-        Наша компания – это штат специалистов с более чем 15 летним стажем работы в сфере строительства загородных
-        домов. Мы гарантируем качественное воплощение Ваших идей и предпочтений.
+        СтройЭлит – это штат специалистов с более чем 10 летним стажем работы в сфере строительства загородных
+        домов. Мы проектируем и строим дома под ключ из:
+        ........................................................................................................................................................................
       </p>
       <button class="about__main__button">
-        Читать далее
+        Узнать больше
       </button>
     </div>
-    <form class="about__main__form">
-      <div class="form__header">
-        Оставить заявку
-      </div>
-      <input
-        class="form__input"
-        type="text"
-        placeholder="Ваше имя"
-      />
-      <input
-        class="form__input"
-        type="tel"
-        placeholder="Телефон"
-      />
-      <input
-        class="form__input"
-        type="email"
-        placeholder="Email"
-      />
-      <textarea
-        class="input__wide"
-        type="text"
-        placeholder="Сообщение"
-      />
-      <input
-        type="submit"
-        class="form__submit"
-        value="Отправить"
-      />
-    </form>
   </div>
 </template>
 
@@ -57,131 +25,58 @@ export default {
 <style scoped>
 .about__main {
   display: flex;
-  flex-direction: column;
-}
-
-.about__main_content {
   padding: 20px;
+  border-bottom: 1px solid #f9f9f9;
+  box-shadow: 0 15px 15px #f9f9f9;
 }
-
 .about__main__header {
+  color: #E1704B;
   font-size: 25px;
-  margin-bottom: 30px;
+  margin: 10px auto 30px;
 }
-
-span {
-  color: #1E3053;
-  font-size: 30px;
+.about__main_content{
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-
 .about__main__button {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #1E3053;
-  color: #ffffff;
-  width: 150px;
-  height: 50px;
+  background: #E1704B;
+  border: 0.2px solid #f9f9f9;
   border-radius: 10px;
-  padding: 5px;
-  border: none;
+  color: #f9f9f9;
   transition: all 0.5s ease;
   margin: 30px auto;
-}
-
-.about__main__form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 20px 30px;
-  background: #f9f9f9;
-  height: 100%;
-  z-index: 2;
-  border-radius: 5px;
-}
-.form__header {
-  font-size: 20px;
-  font-weight: bold;
-  margin-bottom: 30px;
-}
-
-.form__input {
-  width: 100%;
-  height: 30px;
-  padding: 5px;
-  border: none;
-  border-radius: 5px;
-  margin-top: 10px;
-}
-
-.input__wide {
-  width: 100%;
-  height: 100px;
-  padding: 10px;
-  border: none;
-  border-radius: 5px;
-  margin-top: 10px;
-}
-
-.form__submit {
-  display: block;
-  background: #F09236;
-  font-size: 13px;
-  color: #1E3053;
-  width: 130px;
-  height: 40px;
-  border-radius: 5px;
-  border: none;
-  padding: 3px;
-  margin-top: 15px;
-  transition: all 0.5s ease;
+  padding: 10px 20px;
+  font-size: 15px;
+  box-shadow: -1px 1px 5px gray;
 }
 
 @media (min-width: 768px) {
   .about__main {
-    flex-direction: row;
-    justify-content: space-between;
-  }
-
-  .about__main_content {
-    display: flex;
     flex-direction: column;
-    width: 60%;
-    padding: 100px;
+    justify-content: space-between;
+    padding: 30px 100px;
   }
-
   .about__main__header {
-    font-size: 40px;
-    margin-bottom: 30px;
-  }
-
-  .about__main__text {
-    color: #868686;
-    font-size: 15px;
-  }
-
-  .about__main__button:hover {
-    width: 203px;
-    height: 53px;
-    color: #F09236;
-    transition: all 0.5s ease;
-  }
-  .about__main__form {
-    width: 35%;
-    margin-left: auto;
-    margin-right: 10px;
-    margin-top: -70px;
-    padding: 20px 30px;
-  }
-
-  .form__header {
     font-size: 30px;
   }
-
-  .form__submit:hover {
-    color: #F09236;
-    background: #000000;
+  .about__main_content{
+    flex-direction: column;
+  }
+  .about__main__text {
+    font-size: 18px;
+    width: 50%;
+    align-self: flex-start;
+  }
+  .about__main__button {
+    font-size: 25px;
+    transition: all 0.5s ease;
+  }
+  .about__main__button:hover{
+    font-size: 26px;
     transition: all 0.5s ease;
   }
 }
