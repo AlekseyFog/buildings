@@ -4,15 +4,11 @@
       <p class="splash__text">
         Строительство загородных домов под ключ в Санкт-Петербурге
       </p>
-      <div class="splash__button">
-        Посмотреть проекты
-      </div>
-      <img
-        class="ricardo"
-        src="~@/assets/svg/ricardo.gif"
-        width="10"
-        height="10"
-      />
+      <router-link to="houses">
+        <div class="splash__button">
+          Посмотреть проекты
+        </div>
+      </router-link>
     </div>
   </div>
 </template>
@@ -31,6 +27,7 @@ export default {
   height: 350px;
   background: url("~@/assets/svg/backgroundv1.jpeg") no-repeat;
   background-size: cover;
+  z-index: 20;
 }
 
 .splash__wrap {
@@ -63,39 +60,6 @@ export default {
   font-size: 10px;
 }
 
-.ricardo {
-  position: absolute;
-  width: 10px;
-  height: 10px;
-  top: 45%;
-  right: 20%;
-}
-@media (min-width: 375px) {
-  .ricardo{
-    right: 30%;
-  }
-}
-@media (min-width: 400px) {
-  .ricardo{
-    right: 35%;
-  }
-}
-@media (min-width: 427px) {
-  .ricardo{
-    right: 40%;
-  }
-}
-@media (min-width: 471px) {
-  .ricardo{
-    right: 45%;
-  }
-}
-@media (min-width: 507px) {
-  .ricardo{
-    right: 50%;
-  }
-}
-
 @media (min-width: 576px) {
   .splash {
     height: 450px;
@@ -125,41 +89,6 @@ export default {
   .splash__button {
     bottom: 50px;
     right: 100px;
-  }
-
-  .ricardo{
-    right: 45%;
-    top: 50%;
-  }
-  @media (min-width: 650px) {
-    .ricardo{
-      right: 50%;
-    }
-  }
-  @media (min-width: 720px) {
-    .ricardo{
-      right: 55%;
-    }
-  }
-  @media (min-width: 792px) {
-    .ricardo{
-      right: 60%;
-    }
-  }
-  @media (min-width: 895px) {
-    .ricardo{
-      right: 63%;
-    }
-  }
-  @media (min-width: 968px) {
-    .ricardo{
-      right: 66%;
-    }
-  }
-  @media (min-width: 1065px) {
-    .ricardo{
-      right: 70%;
-    }
   }
 }
 

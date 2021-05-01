@@ -1,42 +1,18 @@
 <template>
   <div class="services">
     <div class="services__header">
-      Наши услуги
+      Услуги
     </div>
-    <div class="services__main row">
-      <div class="services__main_item col-12 col-md-6">
-        <div class="services__main_item-header">
-          Услуга
-        </div>
-        <div class="services__main_item-text">
-          Описание услуги
-        </div>
-      </div>
-      <div class="services__main_item col-12 col-md-6">
-        <div class="services__main_item-header">
-          Услуга
-        </div>
-        <div class="services__main_item-text">
-          Описание услуги
-        </div>
-      </div>
-      <div class="services__main_item col-12 col-md-6">
-        <div class="services__main_item-header">
-          Услуга
-        </div>
-        <div class="services__main_item-text">
-          Описание услуги
-        </div>
-      </div>
-      <div class="services__main_item col-12 col-md-6">
-        <div class="services__main_item-header">
-          Услуга
-        </div>
-        <div class="services__main_item-text">
-          Описание услуги
-        </div>
-      </div>
+    <div class="services__text">
+      <p>
+        Мы предлагаем полный спектр услуг для Вашего дома, начиная от
+        проектирования,
+        и заканчивая отделкой внутренних помещений (ВПОЛНЕ ВЕРОЯТНО ЧТО СЮДА НАДО НАКИДАТЬ ФОТОК)
+      </p>
     </div>
+    <button class="services__button-more">
+      Подробнее...
+    </button>
   </div>
 </template>
 
@@ -54,24 +30,38 @@ export default {
   background: #f9f9f9;
 }
 
-.services__header{
+.services__header {
   color: #E1704B;
   font-size: 35px;
-  margin: 10px auto 30px;
+  font-weight: bold;
+  margin: 10px auto 20px;
 }
 
-.services__main{
+.services__text {
+  padding: 20px;
+}
+
+.services__button-more {
   display: flex;
   align-items: center;
   justify-content: center;
+  border: 1px solid #000000;
+  border-radius: 15px;
+  padding: 15px;
+  background: none;
+  width: 200px;
+  margin-left: auto;
+  margin-right: 60px;
 }
 
-.services__main_item {
-  border-radius: 10px;
-  margin: 10px;
-  max-width: 300px;
+.services__text_p{
+  margin-bottom: 40px;
 }
-.services__main_item:hover {
-  color: #E1704B;
+
+@media (min-width: 768px) {
+  .services__text {
+    padding: 40px;
+  }
 }
+
 </style>

@@ -1,87 +1,46 @@
 <template>
   <div class="advantages">
     <div class="advantages__header">
-      Условия и преимущества работы с нами
+      Преимущества работы с нами
     </div>
-    <div class="advantages__main row">
-      <div class="advantages__main_card col-12 col-md-6 col-lg-3">
-        <div class="advantages__main_card_img">
-          .
-        </div>
-        <div class="advantages__main_card_head">
-          Преимущество
-        </div>
-        <div class="advantages__main_card_text">
-          Описание преимущества
-        </div>
-      </div>
-      <div class="advantages__main_card col-12 col-md-6 col-lg-3">
-        <div class="advantages__main_card_img">
-          .
-        </div>
-        <div class="advantages__main_card_head">
-          Преимущество
-        </div>
-        <div class="advantages__main_card_text">
-          Описание преимущества
-        </div>
-      </div>
-      <div class="advantages__main_card col-12 col-md-6 col-lg-3">
-        <div class="advantages__main_card_img">
-          .
-        </div>
-        <div class="advantages__main_card_head">
-          Преимущество
-        </div>
-        <div class="advantages__main_card_text">
-          Описание преимущества
-        </div>
-      </div>
-      <div class="advantages__main_card col-12 col-md-6 col-lg-3">
-        <div class="advantages__main_card_img">
-          .
-        </div>
-        <div class="advantages__main_card_head">
-          Преимущество
-        </div>
-        <div class="advantages__main_card_text">
-          Описание преимущества
-        </div>
-      </div>
-      <div class="advantages__main_card col-12 col-md-6 col-lg-3">
-        <div class="advantages__main_card_img">
-          .
-        </div>
-        <div class="advantages__main_card_head">
-          Преимущество
-        </div>
-        <div class="advantages__main_card_text">
-          Описание преимущества
-        </div>
-      </div>
-      <div class="advantages__main_card col-12 col-md-6 col-lg-3">
-        <div class="advantages__main_card_img">
-          .
-        </div>
-        <div class="advantages__main_card_head">
-          Преимущество
-        </div>
-        <div class="advantages__main_card_text">
-          Описание преимущества
-        </div>
+    <div
+      v-for="(item, index) in advantages"
+      :key="index"
+      class="row"
+    >
+      <div class="col-12">
+        <AdvantagesBlock
+          :item="item"
+          :revert="index % 2 === 0"
+        />
       </div>
     </div>
   </div>
 </template>
 
 <script>
+import translations from '@/store/translations';
+import advantages from '@/store/advantages';
+import AdvantagesBlock from '@/components/layout-main/AdvantagesBlock';
+
 export default {
   name: 'Advantages',
+  components: {
+    AdvantagesBlock,
+  },
+
+  data() {
+    return {
+      translations,
+      advantages,
+    };
+  },
 };
 </script>
 
 <style scoped>
 .advantages {
+  margin-top: 50px;
   display: flex;
   flex-direction: column;
   padding: 10px;
@@ -89,18 +48,7 @@ export default {
 
 .advantages__header {
   font-size: 35px;
-  margin: 10px auto 30px;
+  margin: 10px auto 50px;
 }
-.advantages__main{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.advantages__main_card{
-  border-radius: 10px;
-  margin: 10px;
-}
-.advantages__main_card:hover{
-  box-shadow: 0 0 5px #E1704B;
-}
+
 </style>

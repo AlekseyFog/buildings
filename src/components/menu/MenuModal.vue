@@ -1,14 +1,11 @@
 <template>
   <div class="menu">
-    <div
-      class="menu__wrapper"
-    >
-      <div class="menu__header">
-        <CloseButton
-          class="close-button"
-          @click="close"
-        />
-      </div>
+    <div class="menu__wrapper">
+      .
+      <CloseButton
+        class="close-button"
+        @click="close"
+      />
       <div
         class="menu__item"
         @click="close"
@@ -17,97 +14,12 @@
           Главная
         </router-link>
       </div>
-      <div
-        class="menu__item"
-        @click="close"
-      >
-        <router-link to="/houses-br">
-          <div class="sub__menu_item">
-            Кирпичные дома
-          </div>
-        </router-link>
-      </div>
-      <div
-        class="menu__item"
-        @click="close"
-      >
-        <router-link to="/houses-gb">
-          <div class="sub__menu_item">
-            Дома из газобетона
-          </div>
-        </router-link>
-      </div>
-      <div
-        class="menu__item"
-        @click="close"
-      >
-        <router-link to="/houses-gl">
-          <div class="sub__menu_item">
-            Дома из клееного бруса
-          </div>
-        </router-link>
-      </div>
-      <div
-        class="menu__item"
-        @click="close"
-      >
-        <router-link to="/houses-pr">
-          <div class="sub__menu_item">
-            Дома из профилированного бруса
-          </div>
-        </router-link>
-      </div>
-      <div
-        class="menu__item"
-        @click="close"
-      >
-        <router-link to="/baths">
-          Бани
-        </router-link>
-      </div>
-      <div
-        class="menu__item"
-        @click="close"
-      >
-        <router-link to="/foundation">
-          Фундаменты
-        </router-link>
-      </div>
-      <div
-        class="menu__item"
-        @click="close"
-      >
-        <router-link to="/services">
-          Услуги
-        </router-link>
-      </div>
-      <div
-        class="menu__item"
-        @click="close"
-      >
-        <router-link to="/about">
-          О нас
-        </router-link>
-      </div>
-      <div
-        class="menu__item"
-        @click="close"
-      >
-        <router-link to="/reviews">
-          Отзывы
-        </router-link>
-      </div>
-      <div
-        class="menu__item"
-        @click="close"
-      >
-        <router-link to="/contacts">
-          Контакты
-        </router-link>
-      </div>
-      <button class="order_button">
-        Заказать звонок
-      </button>
+      <div class="menu__item" />
+      <div class="menu__item" />
+      <div class="menu__item" />
+      <div class="menu__item" />
+      <div class="menu__item" />
+      <div class="menu__item" />
     </div>
   </div>
 </template>
@@ -150,24 +62,14 @@ export default {
 .menu__wrapper {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  justify-content: space-between;
-  width: 300px;
+  width: 250px;
   min-height: 100vh;
   background: #465162;
   padding: 10px;
   margin-left: auto;
 }
 
-.menu__header {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  height: 30px;
-}
-.menu__item{
+.menu__item {
   font-size: 15px;
 }
 
@@ -207,4 +109,15 @@ a:visited {
   align-self: flex-end;
 }
 
+.projects__submenu {
+  display: none;
+  height: 0;
+  transition: all 0.5s ease-in-out;
+}
+
+.projects:hover .projects__submenu {
+  display: block;
+  height: auto;
+  transition: all 0.5s ease-in-out;
+}
 </style>
