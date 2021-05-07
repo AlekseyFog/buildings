@@ -19,7 +19,7 @@ export default {
 }
 
 .logo__name_span {
-  color: #E1704B;
+  color: #d24534;
 }
 
 @media (min-width: 576px) {

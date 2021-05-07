@@ -3,16 +3,23 @@ import VueRouter from 'vue-router';
 
 import mainLayout from '@/views/MainLayout';
 
-import housesCatalog from '@/views/HouseCatalog';
-import bathsCatalog from '@/views/BathsCatalog';
-import basementCatalog from '@/views/BasementCatalog';
+import partnersCatalog from '@/views/PartnersCatalog';
 
-import designing from '@/views/Designing';
+import buildBaths from '@/views/Building/BuildBaths';
+import buildHouses from '@/views/Building/BuildHouses';
+import buildFoundations from '@/views/Building/BuildFoundations';
 
-import portfolio from '@/views/Portfolio';
+import services from '@/views/Services';
+import designing from '@/views/Services/Designing';
+import borders from '@/views/Services/Borders';
+import water from '@/views/Services/Water';
+import landscape from '@/views/Services/Landscape';
+import smarthouse from '@/views/Services/SmartHouse';
+
+import portfolio from '@/views/v2/Portfolio';
 
 import about from '@/views/About';
-import aboutTerms from '@/views/AboutTerms';
+import aboutTerms from '@/views/v2/AboutTerms';
 import reviews from '@/views/Reviews';
 
 import contacts from '@/views/Contacts';
@@ -30,23 +37,53 @@ const router = new VueRouter({
     {
       path: '/baths',
       // name : 'baths',
-      component: bathsCatalog,
+      component: buildBaths,
+    },
+    {
+      path: '/partners',
+      // name : 'partners',
+      component: partnersCatalog,
     },
     {
       path: '/houses',
       // name : 'houses',
-      component: housesCatalog,
+      component: buildHouses,
+    },
+    {
+      path: '/foundations',
+      // name : 'foundations',
+      component: buildFoundations,
     },
 
+    {
+      path: '/services',
+      // name : 'services',
+      component: services,
+    },
     {
       path: '/designing',
       // name : 'designing',
       component: designing,
     },
     {
-      path: '/basement',
-      // name : 'basement',
-      component: basementCatalog,
+      path: '/borders',
+      // name : 'borders',
+      component: borders,
+    },
+    {
+      path: '/water',
+      // name : 'water',
+      component: water,
+    },
+    {
+      path: '/landscape',
+      // name : 'landscape',
+      component: landscape,
+    },
+    {
+      path: '/smarthouse',
+      // name : 'smarthouse',
+      component: smarthouse,
     },
 
     {

@@ -19,7 +19,7 @@ export default {
 };
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 
 .splash {
   display: block;
@@ -40,7 +40,7 @@ export default {
 
 .splash__text {
   margin-top: 30px;
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: 'Raleway', sans-serif;
   font-size: 20px;
   color: #f9f9f9;
 }
@@ -57,7 +57,60 @@ export default {
   bottom: 10px;
   right: 25%;
   padding: 15px;
-  font-size: 10px;
+  font-size: 15px;
+  width: 250px;
+  height: 60px;
+  transition: .6s;
+  overflow: hidden;
+
+  &:focus {
+    outline: 0;
+  }
+
+  &:before {
+    content: '';
+    display: block;
+    position: absolute;
+    background: rgba(255, 255, 255, 0.5);
+    width: 60px;
+    height: 100%;
+    left: 0;
+    top: 0;
+    opacity: .5;
+    filter: blur(30px);
+    transform: translateX(-100px) skewX(-15deg);
+  }
+
+  &:after {
+    content: '';
+    display: block;
+    position: absolute;
+    background: rgba(255, 255, 255, 0.2);
+    width: 30px;
+    height: 100%;
+    left: 30px;
+    top: 0;
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateX(-100px) skewX(-15deg);
+  }
+
+  &:hover {
+    background: #D24534;
+    cursor: pointer;
+
+    &:before {
+      transform: translateX(300px) skewX(-15deg);
+      opacity: 0.6;
+      transition: .7s;
+    }
+
+    &:after {
+      transform: translateX(300px) skewX(-15deg);
+      opacity: 1;
+      transition: .7s;
+    }
+  }
 }
 
 @media (min-width: 576px) {
@@ -70,25 +123,14 @@ export default {
   }
 
   .splash__button {
-    bottom: 120px;
-    font-size: 20px;
+    right: 100px;
+    bottom: 50px;
+    font-size: 16px;
     transition: all 0.5s ease;
   }
-
-  .splash__button:hover {
-    font-size: 21px;
-    background: rgba(240, 147, 54, 0.7);
-    transition: all 0.5s ease;
-  }
-
   .splash__text {
     margin: 0;
     font-size: 38px;
-  }
-
-  .splash__button {
-    bottom: 50px;
-    right: 100px;
   }
 }
 

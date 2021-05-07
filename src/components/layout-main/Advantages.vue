@@ -40,14 +40,16 @@ export default {
 
 <style scoped>
 .advantages {
-  margin-top: 50px;
+  margin-top: 30px;
   display: flex;
   flex-direction: column;
-  padding: 10px;
+  padding: 30px 10px;
+  background: #F4F5F7;
 }
 
 .advantages__header {
-  font-size: 35px;
+  color: #EA412C;
+  font-size: 40px;
   margin: 10px auto 50px;
 }
 

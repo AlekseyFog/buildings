@@ -1,13 +1,13 @@
 <template>
   <div class="advantages-block">
     <div class="row align-items-center justify-content-around">
-      <div class="col-md-3">
+      <div class="col-12 col-md-6">
         <div class="advantages-block__image">
           <Component :is="item.image" />
         </div>
       </div>
       <div
-        class="col-12 col-md-9"
+        class="col-12 col-md-6"
         :class="[
           revert && 'order-md-first' || 'order-md-second',
         ]"
@@ -24,13 +24,13 @@
 </template>
 
 <script>
-import House from '@/assets/svg/house.svg';
+import image1 from '@/components/AdvantagesImages/image1';
 
 export default {
   name: 'AdvantagesBlock',
 
   components: {
-    House,
+    image1,
   },
 
   props: {
@@ -49,6 +49,7 @@ export default {
 <style scoped>
 
 .advantages-block {
+  display: flex;
   padding: 20px;
   margin-bottom: 40px;
 }
@@ -58,9 +59,7 @@ export default {
   font-weight: bold;
   margin-bottom: 10px;
 }
-
 .advantages-block__image{
-  max-width: 150px;
   margin-left: auto;
 }
 

@@ -1,15 +1,22 @@
 <template>
   <div class="header">
-    <router-link to="/">
-      <Logo />
-    </router-link>
-    <Menu />
+    <div class="container-fluid">
+      <div class="row">
+        <router-link
+          to="/"
+          class="col-12 col-md-3"
+        >
+          <Logo />
+        </router-link>
+        <Menu class="d-none d-md-flex col-md-9" />
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
 import Logo from '@/components/header/Logo';
-import Menu from '@/components/header/Menu';
+import Menu from '@/components/menu/Menu';
 
 export default {
   name: 'Header',
@@ -24,20 +31,11 @@ export default {
 .header {
   position: sticky;
   top: 0;
-  z-index: 5;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  z-index: 5;
   height: 80px;
-  width: 100%;
-  padding: 10px;
   background: #f9f9f9;
-}
-
-@media (min-width: 576px) {
-  .header {
-    flex-direction: row;
-    justify-content: space-between;
-  }
+  min-width: 100%;
 }
 </style>

@@ -2,45 +2,51 @@
   <div class="menu">
     <div class="menu__items_wrapper">
       <div class="menu__item menu__item_projects">
-        <router-link to="/houses">
+        <router-link to="/partners">
           Проекты
         </router-link>
-        <div class="submenu__item_projects">
-          <router-link
-            to="/houses"
-            class="submenu__item_projects-item"
-          >
-            Каталог домов
-          </router-link>
-          <router-link
-            to="/baths"
-            class="submenu__item_projects-item"
-          >
-            Каталог бань
-          </router-link>
-        </div>
+<!--        <div class="submenu__item_projects">-->
+<!--          &lt;!&ndash;          <router-link&ndash;&gt;-->
+<!--          &lt;!&ndash;            to="/houses"&ndash;&gt;-->
+<!--          &lt;!&ndash;            class="submenu__item_projects-item"&ndash;&gt;-->
+<!--          &lt;!&ndash;          >&ndash;&gt;-->
+<!--          &lt;!&ndash;            Каталог домов&ndash;&gt;-->
+<!--          &lt;!&ndash;          </router-link>&ndash;&gt;-->
+<!--          <router-link-->
+<!--            to="/partners"-->
+<!--            class="submenu__item_projects-item"-->
+<!--          >-->
+<!--            Каталог домов-->
+<!--          </router-link>-->
+<!--          <router-link-->
+<!--            to="/baths"-->
+<!--            class="submenu__item_projects-item"-->
+<!--          >-->
+<!--            Каталог бань-->
+<!--          </router-link>-->
+<!--        </div>-->
       </div>
       <div class="menu__item menu__item_builds">
         <router-link
-          to="/buildhouses"
+          to="/houses"
         >
           Строительство
         </router-link>
         <div class="submenu__item_builds">
           <router-link
-            to="/buildhouses"
+            to="/houses"
             class="submenu__item_builds-item"
           >
             Строительство домов под ключ
           </router-link>
           <router-link
-            to="/buildbaths"
+            to="/baths"
             class="submenu__item_builds-item"
           >
             Строительство бань под ключ
           </router-link>
           <router-link
-            to="/basement"
+            to="/foundations"
             class="submenu__item_builds-item"
           >
             Строительство фундаментов
@@ -49,7 +55,7 @@
       </div>
       <div class="menu__item menu__item_services">
         <router-link
-          to="/designing"
+          to="/services"
         >
           Услуги
         </router-link>
@@ -61,25 +67,25 @@
             Индивидуальное проектирование
           </router-link>
           <router-link
-            to="/designing"
+            to="/borders"
             class="submenu__item_services-item"
           >
             Строительство ограждений
           </router-link>
           <router-link
-            to="/designing"
+            to="/water"
             class="submenu__item_services-item"
           >
             Канализация и водоснабжение
           </router-link>
           <router-link
-            to="/designing"
+            to="/landscape"
             class="submenu__item_services-item"
           >
             Ландшафтное проектирование
           </router-link>
           <router-link
-            to="/designing"
+            to="/smarthouse"
             class="submenu__item_services-item"
           >
             Умный дом
@@ -104,14 +110,14 @@
             to="/about"
             class="submenu__item_about-item"
           >
-            Команда
+            Компания
           </router-link>
-          <router-link
-            to="/aboutTerms"
-            class="submenu__item_about-item"
-          >
-            Условия работы
-          </router-link>
+          <!--          <router-link-->
+          <!--            to="/aboutTerms"-->
+          <!--            class="submenu__item_about-item"-->
+          <!--          >-->
+          <!--            Условия работы-->
+          <!--          </router-link>-->
           <router-link
             to="/reviews"
             class="submenu__item_about-item"
@@ -127,44 +133,17 @@
         Контакты
       </router-link>
     </div>
-    <div class="menu__call_wrapper">
-      <div class="phone__mobile">
-        <a href="tel:+79533545699">
-          <Call class="menu__call_icon-mobile" />
-        </a>
-      </div>
-      <div class="phone__desktop">
-        <a
-          href="tel:+79533545699"
-          class="phone__desktop_call"
-        >
-          <Call class="menu__call_icon" />
-          <p>+7(953)354-56-99</p>
-        </a>
-      </div>
-    </div>
   </div>
 </template>
 
 <script>
-import Call from '@/assets/svg/call.svg';
 
 export default {
   name: 'Menu',
-  components: {
-    Call,
-  },
 };
 </script>
 
 <style scoped>
-.menu {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 100%;
-  height: 100%;
-}
 
 .menu__item {
   position: relative;
@@ -180,16 +159,9 @@ export default {
   align-items: center;
 }
 
-.menu__call_wrapper {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  margin-left: auto;
-}
-
 .submenu__item_projects, .submenu__item_builds, .submenu__item_services, .submenu__item_about {
   position: absolute;
-  top: 60px;
+  top: 50px;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -208,44 +180,12 @@ export default {
   align-items: center;
   height: 40px;
   padding: 15px;
-  margin-top: 10px;
+  margin-top: 5px;
   border-bottom: 1px solid #f9f9f9;
 }
 
 .submenu__item_projects-item:last-child, .submenu__item_builds-item:last-child, .submenu__item_services-item:last-child, .submenu__item_about-item:last-child {
   border: none;
-}
-
-.phone__desktop {
-  display: none;
-}
-
-.phone__mobile {
-  display: block !important;
-  margin-left: auto;
-  margin-right: 50px;
-}
-
-.menu__call_icon {
-  width: 30px;
-  height: 30px;
-  margin-right: 5px;
-}
-
-@media (min-width: 576px) {
-  .phone__desktop {
-    display: block !important;
-    margin-right: 50px;
-  }
-
-  .phone__desktop_call {
-    display: flex;
-    align-items: center;
-  }
-
-  .phone__mobile {
-    display: none;
-  }
 }
 
 @media (min-width: 900px) {

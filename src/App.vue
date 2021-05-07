@@ -1,47 +1,71 @@
 <template>
   <div id="app">
-    <MenuModal
-      v-if="menuIsVisible"
-      @close="hideMenu"
-    />
-    <Header />
+    <transition
+      name="fade"
+      mode="out-in"
+    >
+      <MenuModal
+        v-if="menuIsVisible"
+        @close="hideMenu"
+      />
+    </transition>
+    <transition
+      name="fade"
+      mode="out-in"
+    >
+      <CallModal
+        v-if="modalIsVisible"
+        @close_form="closeModal"
+      />
+    </transition>
+    <Header/>
     <div
       class="default-layout"
       :class="[
-        menuIsVisible && 'default-layout_locked'
+        menuIsVisible && 'default-layout_locked',
+        modalIsVisible && 'default-layout_locked'
       ]"
     >
       <MenuMobileButton
         class="header__menu_mobile"
         @show-menu="setMenuIsVisible"
       />
+      <MenuCallButton
+        class="header__menu_call"
+        @open_form="setModalIsVisible"
+      />
       <transition
         name="fade"
         mode="out-in"
       >
-        <router-view />
+        <router-view/>
       </transition>
+      <Footer class="footer"/>
     </div>
-    <Footer />
   </div>
 </template>
 
 <script>
 import Header from '@/components/header/Header';
 import Footer from '@/components/footer/Footer';
-import MenuModal from '@/components/menu/MenuModal';
+import MenuModal from '@/components/modals/MenuModal';
 import MenuMobileButton from '@/components/menu/MenuMobileButton';
+import MenuCallButton from '@/components/menu/MenuCallButton';
+import CallModal from '@/components/modals/CallModal';
 
 export default {
   components: {
+    CallModal,
     Footer,
     MenuMobileButton,
     Header,
     MenuModal,
+    MenuCallButton,
   },
   data() {
     return {
       menuIsVisible: false,
+      modalIsVisible: false,
     };
   },
   methods: {
@@ -51,6 +75,12 @@ export default {
     hideMenu() {
       this.menuIsVisible = false;
     },
+    setModalIsVisible() {
+      this.modalIsVisible = true;
+    },
+    closeModal() {
+      this.modalIsVisible = false;
+    },
   },
 };
 
@@ -59,15 +89,20 @@ export default {
 <style lang="scss">
 
 .fade-enter-active {
-  transition: all .3s ease;
+  transition: all .4s ease;
 }
+
 .fade-leave-active {
-  transition: all .3s cubic-bezier(1.0, 0.5, 0.8, 1.0);
+  transition: all .4s cubic-bezier(1.0, 0.5, 0.8, 1.0);
 }
-.default-layout{
-  min-height: calc(100vh - 200px);
+
+.default-layout {
+  display: flex;
+  flex-direction: column;
+  min-height: calc(100vh - 100px);
 }
-.fade-enter, .fade-leave-active{
+
+.fade-enter, .fade-leave-active {
   transform: translateX(10px);
   opacity: 0;
 }
@@ -84,6 +119,10 @@ export default {
   right: 20px;
   width: 30px;
   height: 30px;
+}
+
+.footer {
+  margin-top: auto;
 }
 
 a {

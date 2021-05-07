@@ -1,21 +1,19 @@
 <template>
   <div class="about__main">
-    <div class="about__main__header">
-      <h3>О компании</h3>
-    </div>
-    <div class="about__main_content">
-      <p class="about__main__text">
-        СтройЭлит – это штат специалистов с более чем 10 летним стажем работы в сфере строительства загородных
-        домов. Наша компания строит дома из следующих материалов: кирпича,
-        клееного и профилированного бруса, газобетона. Кроме того, имеем большой опыт в сфере сборки каркасных домов. В
-        строительстве используем проверенные временем и климатом стройматериалы, а
-        также
-        постоянно изучаем и
-        внедряем новые технологии возведения жилья.
-      </p>
-      <button class="about__main__button">
-        Узнать больше
-      </button>
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-md-8">
+          <p class="about__main__text">
+            Мы – это штат специалистов с более чем 10 летним стажем работы в сфере строительства загородных
+            домов.
+          </p>
+        </div>
+        <div class="col-12 col-md-4">
+          <button class="about__main__button">
+            Читать еще
+          </button>
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -26,26 +24,14 @@ export default {
 };
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 .about__main {
   display: flex;
   flex-direction: column;
   padding: 20px;
   border-bottom: 1px solid #f9f9f9;
   box-shadow: 0 15px 15px #f9f9f9;
-}
-
-.about__main__header {
-  color: #E1704B;
-  font-size: 25px;
-  margin: 10px auto 30px;
-}
-
-.about__main_content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  background: #f9f9f9;
 }
 
 .about__main__text {
@@ -57,46 +43,80 @@ export default {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #E1704B;
+  background: #f09236;
   border: 0.2px solid #f9f9f9;
-  border-radius: 10px;
+  width: 200px;
+  height: 60px;
+  border-radius: 15px;
+  padding: 15px;
+  font-size: 12px;
   color: #f9f9f9;
-  transition: all 0.5s ease;
-  margin: 30px auto;
-  padding: 10px 20px;
-  font-size: 15px;
-  box-shadow: -1px 1px 5px gray;
+  box-shadow: 0 0 1px #333;
+  margin: 50px auto 0;
+  transition: .7s;
+
+  &:focus {
+    outline: 0;
+  }
+
+  &:before {
+    content: '';
+    display: block;
+    position: absolute;
+    background: rgba(255, 255, 255, 0.5);
+    width: 60px;
+    height: 100%;
+    left: 0;
+    top: 0;
+    opacity: .5;
+    filter: blur(30px);
+    transform: translateX(-100px) skewX(-15deg);
+  }
+
+  &:after {
+    content: '';
+    display: block;
+    position: absolute;
+    background: rgba(255, 255, 255, 0.2);
+    width: 30px;
+    height: 100%;
+    left: 30px;
+    top: 0;
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateX(-100px) skewX(-15deg);
+  }
+
+  &:hover {
+    background: #D24534;
+    cursor: pointer;
+    transition: .7s;
+
+    &:before {
+      transform: translateX(300px) skewX(-15deg);
+      opacity: 0.6;
+      transition: .7s;
+    }
+
+    &:after {
+      transform: translateX(300px) skewX(-15deg);
+      opacity: 1;
+      transition: .7s;
+    }
+  }
 }
 
 @media (min-width: 768px) {
   .about__main {
-    flex-direction: column;
-    justify-content: space-between;
-    padding: 30px 100px;
-  }
-
-  .about__main__header {
-    font-size: 30px;
-  }
-
-  .about__main_content {
-    flex-direction: column;
+    padding: 60px;
   }
 
   .about__main__text {
-    font-size: 18px;
-    width: 50%;
-    align-self: flex-start;
+    font-size: 25px;
   }
 
   .about__main__button {
-    font-size: 25px;
-    transition: all 0.5s ease;
-  }
-
-  .about__main__button:hover {
-    font-size: 26px;
-    transition: all 0.5s ease;
+    font-size: 20px;
   }
 }
 </style>

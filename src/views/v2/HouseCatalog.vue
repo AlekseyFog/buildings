@@ -44,7 +44,7 @@
       </div>
       <div class="row">
         <div
-          v-for="(item, index) in filteredHousList"
+          v-for="(item, index) in filteredHouseList"
           :key="index"
           class="col-12 col-md-3 mb-md-4"
         >
@@ -72,14 +72,14 @@ export default {
   },
   data: () => ({
     houseCatalog: HOUSE_CATALOG,
-    fromSliderValue: 150,
+    fromSliderValue: 100,
     tillSliderValue: 500,
     stepSliderValue: 1,
     minSliderValue: 100,
     maxSliderValue: 500,
   }),
   computed: {
-    filteredHousList() {
+    filteredHouseList() {
       const {
         fromSliderValue,
         tillSliderValue,
