@@ -15,27 +15,13 @@
       </div>
       <div
         class="menu__item"
-        @click="showProjectDropdown"
+        @click="close"
       >
-        <div>
+        <router-link
+          to="/partners"
+        >
           Проекты
-        </div>
-        <div v-if="isShowProjectDropdown">
-          <div @click="close">
-            <router-link
-              to="/houses"
-            >
-              Каталог домов
-            </router-link>
-          </div>
-          <div @click="close">
-            <router-link
-              to="/baths"
-            >
-              Каталог бань
-            </router-link>
-          </div>
-        </div>
+        </router-link>
       </div>
       <div
         class="menu__item"
@@ -45,17 +31,23 @@
           Строительство
         </div>
         <div v-if="isShowBuildDropdown">
-          <div @click="close">
-            <router-link to="/designing">
+          <div
+             class="submenu__item"
+            @click="close">
+            <router-link to="/houses">
               Строительстов домов под ключ
             </router-link>
           </div>
-          <div @click="close">
+          <div
+             class="submenu__item"
+            @click="close">
             <router-link to="/services">
               Строительство бань
             </router-link>
           </div>
-          <div @click="close">
+          <div
+             class="submenu__item"
+            @click="close">
             <router-link to="/services">
               Строительство фундаментов
             </router-link>
@@ -70,28 +62,31 @@
           Услуги
         </div>
         <div v-if="isShowServiceDropdown">
-          <div @click="close">
-            <router-link to="/designing">
-              Индивидуальное проектирование
-            </router-link>
-          </div>
-          <div @click="close">
-            <router-link to="/services">
+          <div
+            class="submenu__item"
+            @click="close">
+            <router-link to="/borders">
               Строительство ограждений
             </router-link>
           </div>
-          <div @click="close">
-            <router-link to="/services">
+          <div
+            class="submenu__item"
+            @click="close">
+            <router-link to="/water">
               Канализация и водоснабжение
             </router-link>
           </div>
-          <div @click="close">
-            <router-link to="/services">
+          <div
+            class="submenu__item"
+            @click="close">
+            <router-link to="/landscape">
               Ландшафтное проектирование
             </router-link>
           </div>
-          <div @click="close">
-            <router-link to="/services">
+          <div
+            class="submenu__item"
+            @click="close">
+            <router-link to="/smarthouse">
               Умный дом
             </router-link>
           </div>
@@ -136,7 +131,6 @@ export default {
   data: () => ({
     isShowServiceDropdown: false,
     isShowBuildDropdown: false,
-    isShowProjectDropdown: false,
   }),
 
   methods: {
@@ -149,9 +143,6 @@ export default {
     },
     showBuildDropdown() {
       this.isShowBuildDropdown = !this.isShowBuildDropdown;
-    },
-    showProjectDropdown() {
-      this.isShowProjectDropdown = !this.isShowProjectDropdown;
     },
   },
 
@@ -186,7 +177,13 @@ export default {
 }
 
 .menu__item {
+  margin-top: 20px;
   font-size: 15px;
+}
+
+.submenu__item{
+  margin-top: 10px;
+  margin-left: 7px;
 }
 
 .close-button {

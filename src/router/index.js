@@ -10,7 +10,6 @@ import buildHouses from '@/views/Building/BuildHouses';
 import buildFoundations from '@/views/Building/BuildFoundations';
 
 import services from '@/views/Services';
-import designing from '@/views/Services/Designing';
 import borders from '@/views/Services/Borders';
 import water from '@/views/Services/Water';
 import landscape from '@/views/Services/Landscape';
@@ -59,11 +58,6 @@ const router = new VueRouter({
       path: '/services',
       // name : 'services',
       component: services,
-    },
-    {
-      path: '/designing',
-      // name : 'designing',
-      component: designing,
     },
     {
       path: '/borders',

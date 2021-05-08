@@ -61,12 +61,6 @@
         </router-link>
         <div class="submenu__item_services">
           <router-link
-            to="/designing"
-            class="submenu__item_services-item"
-          >
-            Индивидуальное проектирование
-          </router-link>
-          <router-link
             to="/borders"
             class="submenu__item_services-item"
           >

@@ -8,37 +8,22 @@
     <div class="row mb-5">
       <div class="col-12">
         <p class="paragraph">
-          ...
+          «Умный дом» — это инженерная система, которая управляет средой вашего дома одним кликом или фразой, позволяет
+          сохранить любимые сценарии и показывает состояние инженерных систем, увеличивая престиж, комфорт и
+          безопасность вашего дома.
         </p>
       </div>
     </div>
-    <div class="row mb-5">
-      <div class="col-12">
-        <p class="paragraph">
-          ...
-        </p>
-      </div>
-    </div>
-    <div class="row mb-5">
-      <div class="col-12">
-        <p class="paragraph">
-          ...
-        </p>
-      </div>
-    </div>
-    <div class="row mb-5">
-      <div class="col-12">
-        <p class="paragraph">
-          ...
-        </p>
-      </div>
-    </div>
+    <Sorry />
   </div>
 </template>
 
 <script>
+import Sorry from '@/views/Sorry';
+
 export default {
   name: 'Baths',
+  components: { Sorry },
 };
 </script>
 
