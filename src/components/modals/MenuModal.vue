@@ -32,23 +32,23 @@
         </div>
         <div v-if="isShowBuildDropdown">
           <div
-             class="submenu__item"
+            class="submenu__item"
             @click="close">
             <router-link to="/houses">
               Строительстов домов под ключ
             </router-link>
           </div>
           <div
-             class="submenu__item"
+            class="submenu__item"
             @click="close">
-            <router-link to="/services">
+            <router-link to="/baths">
               Строительство бань
             </router-link>
           </div>
           <div
-             class="submenu__item"
+            class="submenu__item"
             @click="close">
-            <router-link to="/services">
+            <router-link to="/foundations">
               Строительство фундаментов
             </router-link>
           </div>
@@ -181,7 +181,7 @@ export default {
   font-size: 15px;
 }
 
-.submenu__item{
+.submenu__item {
   margin-top: 10px;
   margin-left: 7px;
 }
