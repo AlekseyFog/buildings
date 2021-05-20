@@ -1,7 +1,7 @@
 <template>
   <div class="img">
     <img
-      src="@/assets/svg/key.jpg"
+      :src="`/main/main-content1.jpeg`"
       alt="house"
     />
   </div>
@@ -22,6 +22,6 @@ export default {
   box-shadow: 1px 1px 5px #ffffff;
   width: 100%;
   max-width: 500px;
-  margin-left: auto;
+  margin: auto;
 }
 </style>

@@ -1,17 +1,22 @@
 <template>
-  <div class="about__main">
+  <div class="about">
     <div class="container">
-      <div class="row">
-        <div class="col-12 col-md-8">
+      <div class="about__main row">
+        <div class="col-12">
           <p class="about__main__text">
-            Мы – это штат специалистов с более чем 10 летним стажем работы в сфере строительства загородных
-            домов.
+            ДомЛэнд – это штат специалистов с 15 летним стажем работы в сфере строительства загородных
+            домов
           </p>
         </div>
-        <div class="col-12 col-md-4">
-          <button class="about__main__button">
-            Читать еще
-          </button>
+      </div>
+      <div class="row">
+        <div class="col-12">
+          <router-link
+            to="/about"
+            class="about__main__button"
+          >
+            Узнать больше...
+          </router-link>
         </div>
       </div>
     </div>
@@ -25,98 +30,61 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.about__main {
+.about {
+  z-index: 2;
   display: flex;
   flex-direction: column;
   padding: 20px;
-  border-bottom: 1px solid #f9f9f9;
-  box-shadow: 0 15px 15px #f9f9f9;
+  border-bottom: 0.1px solid #722311;
+  box-shadow: 0 0 5px #722311;
   background: #f9f9f9;
+}
+
+.about__main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .about__main__text {
   width: 100%;
   font-size: 10px;
+  font-family: 'Raleway', sans-serif;
 }
 
 .about__main__button {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #f09236;
-  border: 0.2px solid #f9f9f9;
-  width: 200px;
+  background: #722311;
+  border: none;
   height: 60px;
   border-radius: 15px;
-  padding: 15px;
-  font-size: 12px;
+  padding: 20px;
+  font-size: 20px;
+  font-weight: bold;
+  font-family: 'Raleway', sans-serif;
   color: #f9f9f9;
-  box-shadow: 0 0 1px #333;
   margin: 50px auto 0;
-  transition: .7s;
-
-  &:focus {
-    outline: 0;
-  }
-
-  &:before {
-    content: '';
-    display: block;
-    position: absolute;
-    background: rgba(255, 255, 255, 0.5);
-    width: 60px;
-    height: 100%;
-    left: 0;
-    top: 0;
-    opacity: .5;
-    filter: blur(30px);
-    transform: translateX(-100px) skewX(-15deg);
-  }
-
-  &:after {
-    content: '';
-    display: block;
-    position: absolute;
-    background: rgba(255, 255, 255, 0.2);
-    width: 30px;
-    height: 100%;
-    left: 30px;
-    top: 0;
-    opacity: 0;
-    filter: blur(5px);
-    transform: translateX(-100px) skewX(-15deg);
-  }
+  transition: .5s;
+  width: 220px;
 
   &:hover {
-    background: #D24534;
     cursor: pointer;
-    transition: .7s;
-
-    &:before {
-      transform: translateX(300px) skewX(-15deg);
-      opacity: 0.6;
-      transition: .7s;
-    }
-
-    &:after {
-      transform: translateX(300px) skewX(-15deg);
-      opacity: 1;
-      transition: .7s;
-    }
+    font-size: 22px;
+    transition: .5s;
   }
 }
 
 @media (min-width: 768px) {
   .about__main {
-    padding: 60px;
+    padding: 35px;
   }
 
   .about__main__text {
-    font-size: 25px;
-  }
-
-  .about__main__button {
-    font-size: 20px;
+    font-size: 30px;
+    color: #722311;
+    font-weight: bold;
   }
 }
 </style>

@@ -3,7 +3,7 @@
     <div class="container">
       <div class="row mt-5 mb-5">
         <div class="m-auto sorry__image">
-          <img src="@/assets/svg/sorry.png"/>
+          <img src="public/main/sorry.png" />
         </div>
       </div>
       <div class="row mt-5 mb-5">
@@ -13,12 +13,16 @@
       </div>
       <div class="col-12 mb-3">
         <router-link to="/">
-          <button class="sorry__button">На главную</button>
+          <button class="sorry__button">
+            На главную
+          </button>
         </router-link>
       </div>
       <div class="col-12">
         <router-link to="/houses">
-          <button class="sorry__button">Каталог домов</button>
+          <button class="sorry__button">
+            Каталог домов
+          </button>
         </router-link>
       </div>
     </div>

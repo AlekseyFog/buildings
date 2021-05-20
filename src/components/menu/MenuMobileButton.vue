@@ -3,7 +3,7 @@
     class="header__menu_button"
     @click="SetMenuIsVisible"
   >
-    <MobileButton />
+    <MobileButton class="mob_button" />
   </button>
 </template>
 
@@ -28,6 +28,11 @@ export default {
   z-index: 999;
   border: none;
   background: none;
+}
+
+.mob_button{
+  fill: #ffffff;
+  stroke: #722311;
 }
 
 </style>

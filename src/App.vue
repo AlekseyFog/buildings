@@ -1,23 +1,14 @@
 <template>
   <div id="app">
-    <transition
-      name="fade"
-      mode="out-in"
-    >
-      <MenuModal
-        v-if="menuIsVisible"
-        @close="hideMenu"
-      />
-    </transition>
-    <transition
-      name="fade"
-      mode="out-in"
-    >
-      <CallModal
-        v-if="modalIsVisible"
-        @close_form="closeModal"
-      />
-    </transition>
+
+    <MenuModal
+      v-if="menuIsVisible"
+      @close="hideMenu"
+    />
+    <CallModal
+      v-if="modalIsVisible"
+      @close_form="closeModal"
+    />
     <Header/>
     <div
       class="default-layout"
@@ -40,7 +31,7 @@
       >
         <router-view/>
       </transition>
-      <Footer class="footer"/>
+      <Footer class="footer" />
     </div>
   </div>
 </template>
@@ -54,6 +45,9 @@ import MenuCallButton from '@/components/menu/MenuCallButton';
 import CallModal from '@/components/modals/CallModal';
 
 export default {
+  metaInfo: {
+    title: 'her poimi chto',
+  },
   components: {
     CallModal,
     Footer,
@@ -89,11 +83,11 @@ export default {
 <style lang="scss">
 
 .fade-enter-active {
-  transition: all .4s ease;
+  transition: all .5s ease;
 }
 
 .fade-leave-active {
-  transition: all .4s cubic-bezier(1.0, 0.5, 0.8, 1.0);
+  transition: all .5s cubic-bezier(1.0, 0.5, 0.8, 1.0);
 }
 
 .default-layout {
@@ -109,7 +103,6 @@ export default {
 
 .default-layout_locked {
   position: fixed;
-  top: 0;
   left: 0;
 }
 

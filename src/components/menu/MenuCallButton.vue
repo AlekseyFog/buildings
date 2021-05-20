@@ -45,12 +45,13 @@ export default {
     align-items: center;
     justify-content: center;
     margin-left: auto;
-    background: #E1704B;
+    border: 2px solid #722311;
     border-radius: 50%;
     box-shadow: 1px 1px 3px #323b47;
     width: 50px;
     height: 50px;
     transition: all 0.3s ease-in-out;
+    cursor: pointer;
   }
 
   .menu__call_wrapper:hover {
@@ -64,6 +65,7 @@ export default {
     width: 30px;
     height: 30px;
     margin: auto;
+    fill: #722311;
   }
 }
 </style>

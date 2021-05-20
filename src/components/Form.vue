@@ -1,38 +1,49 @@
 <template>
-  <div class="row mb-5">
-    <div class="col-12 form__wrapper">
+  <div class="container-fluid">
+    <div class="row mb-5">
       <form class="order_form">
-        <h3 class="form__header">
-          Оставить заявку
-        </h3>
-        <label for="name">Имя</label>
-        <input
-          required
-          id="name"
-          type="text"
-          placeholder="Ваше имя"
-        />
-        <label for="phone">Телефон</label>
-        <input
-          required
-          id="phone"
-          type="tel"
-          placeholder="Телефон"
-        />
-        <label for="email">Email</label>
-        <input
-          required
-          id="email"
-          type="email"
-          placeholder="Ваш email"
-        />
-        <label for="comment">Комментарий</label>
-        <textarea
-          required
-          id="comment"
-          placeholder="Комментарий"
-        />
-        <input type="submit" class="button" />
+        <div class="col-12">
+          <h3 class="form__header">
+            Оставить заявку
+          </h3>
+        </div>
+        <div class="col-12">
+          <input
+            id="name"
+            required
+            type="text"
+            placeholder="Ваше имя"
+          />
+        </div>
+        <div class="col-12">
+          <input
+            id="phone"
+            required
+            type="tel"
+            placeholder="Телефон"
+          />
+        </div>
+        <div class="col-12">
+          <input
+            id="email"
+            required
+            type="email"
+            placeholder="Ваш email"
+          />
+        </div>
+        <div class="col-12">
+          <textarea
+            id="comment"
+            required
+            placeholder="Комментарий"
+          />
+        </div>
+        <div class="col-12">
+          <input
+            type="submit"
+            class="button"
+          />
+        </div>
       </form>
     </div>
   </div>
@@ -45,15 +56,22 @@ export default {
 </script>
 
 <style scoped>
-.form__header{
+.form__header {
   font-size: 30px;
-  color: #f09236;
+  color: #722311;
   margin-bottom: 20px;
+  background: #f9f9f9;
+  padding: 5px;
+  border-radius: 7px;
+  text-align: center;
 }
 
-.form__wrapper {
-  padding: 20px;
-  background: #f9f9f9;
+.order_form {
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
 }
 
 form {
@@ -63,13 +81,9 @@ form {
   justify-content: center;
 }
 
-label {
-  margin: 10px 0;
-}
-
 #email, #name, #phone {
   margin: 10px 0;
-  width: 300px;
+  width: 350px;
   height: 40px;
   border: none;
   border-radius: 10px;
@@ -77,7 +91,7 @@ label {
   box-shadow: 0 0 2px #ffffff;
 }
 
-#comment{
+#comment {
   width: 350px;
   height: 100px;
   border: none;
@@ -85,13 +99,13 @@ label {
   padding: 10px;
 }
 
-.button{
+.button {
   width: 150px;
   height: 50px;
   border: none;
   border-radius: 10px;
   margin-top: 20px;
-  background: #E1704B;
+  background: #722311;
   box-shadow: 0 0 3px #465162;
 }
 </style>

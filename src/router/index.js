@@ -3,25 +3,24 @@ import VueRouter from 'vue-router';
 
 import mainLayout from '@/views/MainLayout';
 
-import partnersCatalog from '@/views/PartnersCatalog';
-
 import buildBaths from '@/views/Building/BuildBaths';
-import buildHouses from '@/views/Building/BuildHouses';
 import buildFoundations from '@/views/Building/BuildFoundations';
 
-import services from '@/views/Services';
+import services from '@/views/Services/Services';
 import borders from '@/views/Services/Borders';
 import water from '@/views/Services/Water';
 import landscape from '@/views/Services/Landscape';
 import smarthouse from '@/views/Services/SmartHouse';
 
-import portfolio from '@/views/v2/Portfolio';
+import portfolio from '@/views/about/Portfolio';
 
-import about from '@/views/About';
+import about from '@/views/about/About';
 import aboutTerms from '@/views/v2/AboutTerms';
-import reviews from '@/views/Reviews';
+import reviews from '@/views/about/Reviews';
 
-import contacts from '@/views/Contacts';
+import contacts from '@/views/about/Contacts';
+
+import houses from './house';
 
 Vue.use(VueRouter);
 
@@ -38,16 +37,7 @@ const router = new VueRouter({
       // name : 'baths',
       component: buildBaths,
     },
-    {
-      path: '/partners',
-      // name : 'partners',
-      component: partnersCatalog,
-    },
-    {
-      path: '/houses',
-      // name : 'houses',
-      component: buildHouses,
-    },
+    ...houses,
     {
       path: '/foundations',
       // name : 'foundations',
@@ -109,6 +99,14 @@ const router = new VueRouter({
     },
 
   ],
+  // eslint-disable-next-line no-unused-vars
+  scrollBehavior(to, from, savedPosition) {
+    return {
+      x: 0,
+      y: 0,
+      behavior: 'smooth',
+    };
+  },
 });
 
 export default router;

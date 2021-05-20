@@ -2,12 +2,7 @@
   <div class="header">
     <div class="container-fluid">
       <div class="row">
-        <router-link
-          to="/"
-          class="col-12 col-md-3"
-        >
-          <Logo />
-        </router-link>
+        <Logo class="col-12 col-md-3" />
         <Menu class="d-none d-md-flex col-md-9" />
       </div>
     </div>
@@ -28,14 +23,20 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.header {
-  position: sticky;
-  top: 0;
-  display: flex;
-  align-items: center;
-  z-index: 5;
-  height: 80px;
-  background: #f9f9f9;
-  min-width: 100%;
+.header{
+  position: relative;
+  height: 75px;
+}
+@media (min-width: 576px) {
+  .header {
+    position: sticky;
+    top: 0;
+    display: flex;
+    align-items: center;
+    z-index: 5;
+    height: 80px;
+    background: #f9f9f9;
+    min-width: 100%;
+  }
 }
 </style>

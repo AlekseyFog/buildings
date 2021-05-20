@@ -1,7 +1,7 @@
 {
-  "name": "buildings",
-  "short_name": "buildings",
-  "description": "AMK-600 frontend",
+  "name": "domland",
+  "short_name": "domland",
+  "description": "DomLand build site",
   "dir": "auto",
   "lang": "en-US",
   "display": "standalone",

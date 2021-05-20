@@ -10,11 +10,11 @@
           <a
             href="tel:+79533545699"
           >
-            <p>+7(953)354-56-99</p>
+            +7(953)354-56-99
           </a>
         </div>
         <div class="footer__email col-12 col-md-6 col-lg-3">
-          alekseyfog22@gmail.com
+          sk.domland@gmail.com
         </div>
         <div class="footer__copyright col-12 col-md-6 col-lg-3">
           <p>© ООО СК "ДомЛэнд" 2021</p>
@@ -34,7 +34,7 @@
       <div class="row">
         <div class="fog col-12">
           <p>
-            Designed and developed by Fogstudio, Aleksey Tumanov. All rights reserved
+            A part of FogFamily. Designed and developed by FogStudio LTD, Aleksey Tumanov. All rights reserved
           </p>
         </div>
       </div>
@@ -57,17 +57,19 @@ export default {
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
-  padding: 10px 30px;
+  padding: 30px 30px 20px;
+  border-top: 1px solid #722311;
+  background: #f9f9f9;
 }
 
 .footer__info {
   align-items: center;
   width: 100%;
-  color: #465162;
+  color: #722311;
 }
 
-.footer__phone, .footer__email {
-  color: #465162;
+.footer__phone a, .footer__email {
+  color: #722311;
 }
 
 .footer__terms {

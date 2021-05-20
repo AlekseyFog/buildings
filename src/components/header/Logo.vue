@@ -1,8 +1,11 @@
 <template>
   <div class="logo">
-    <h1 class="logo__name">
-      Строй<span class="logo__name_span">Элит</span>
-    </h1>
+    <router-link to="/">
+      <img
+        src="~@/assets/svg/Header-logo.png"
+        alt="logo"
+      />
+    </router-link>
   </div>
 </template>
 
@@ -14,23 +17,10 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.logo__name {
-  font-size: 30px;
-}
 
-.logo__name_span {
-  color: #d24534;
-}
-
-@media (min-width: 576px) {
-  .logo {
-    margin-top: 0;
-    margin-right: 15px;
-    margin-left: 15px;
-  }
-  .logo__name {
-   font-size: 35px;
-  }
+.logo img {
+  width: 260px;
+  height: 60px;
 }
 
 </style>

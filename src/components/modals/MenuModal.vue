@@ -18,78 +18,79 @@
         @click="close"
       >
         <router-link
-          to="/partners"
+          :to="{ name: 'housecat' }"
         >
           Проекты
         </router-link>
       </div>
-      <div
-        class="menu__item"
-        @click="showBuildDropdown"
-      >
+      <div class="menu__item">
         <div>
           Строительство
         </div>
-        <div v-if="isShowBuildDropdown">
+        <div>
           <div
             class="submenu__item"
-            @click="close">
-            <router-link to="/houses">
+            @click="close"
+          >
+            <router-link :to="{ name: 'housecat' }">
               Строительстов домов под ключ
             </router-link>
           </div>
           <div
             class="submenu__item"
-            @click="close">
+            @click="close"
+          >
             <router-link to="/baths">
               Строительство бань
             </router-link>
           </div>
           <div
             class="submenu__item"
-            @click="close">
+            @click="close"
+          >
             <router-link to="/foundations">
               Строительство фундаментов
             </router-link>
           </div>
         </div>
       </div>
-      <div
-        class="menu__item"
-        @click="showServiceDropdown"
-      >
+      <div class="menu__item">
         <div>
           Услуги
         </div>
-        <div v-if="isShowServiceDropdown">
+        <div>
           <div
             class="submenu__item"
-            @click="close">
+            @click="close"
+          >
             <router-link to="/borders">
               Строительство ограждений
             </router-link>
           </div>
           <div
             class="submenu__item"
-            @click="close">
+            @click="close"
+          >
             <router-link to="/water">
               Канализация и водоснабжение
             </router-link>
           </div>
-          <div
-            class="submenu__item"
-            @click="close">
-            <router-link to="/landscape">
-              Ландшафтное проектирование
-            </router-link>
-          </div>
-          <div
-            class="submenu__item"
-            @click="close">
-            <router-link to="/smarthouse">
-              Умный дом
-            </router-link>
-          </div>
+<!--          <div-->
+<!--            class="submenu__item"-->
+<!--            @click="close"-->
+<!--          >-->
+<!--            <router-link to="/landscape">-->
+<!--              Ландшафтное проектирование-->
+<!--            </router-link>-->
+<!--          </div>-->
+<!--          <div-->
+<!--            class="submenu__item"-->
+<!--            @click="close"-->
+<!--          >-->
+<!--            <router-link to="/smarthouse">-->
+<!--              Умный дом-->
+<!--            </router-link>-->
+<!--          </div>-->
         </div>
       </div>
       <div
@@ -128,21 +129,10 @@ export default {
   components: {
     CloseButton,
   },
-  data: () => ({
-    isShowServiceDropdown: false,
-    isShowBuildDropdown: false,
-  }),
 
   methods: {
     close() {
       this.$emit('close');
-    },
-
-    showServiceDropdown() {
-      this.isShowServiceDropdown = !this.isShowServiceDropdown;
-    },
-    showBuildDropdown() {
-      this.isShowBuildDropdown = !this.isShowBuildDropdown;
     },
   },
 

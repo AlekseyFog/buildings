@@ -2,39 +2,39 @@
   <div class="menu">
     <div class="menu__items_wrapper">
       <div class="menu__item menu__item_projects">
-        <router-link to="/partners">
-          Проекты
+        <router-link to="/houses">
+          Проектирование
         </router-link>
-<!--        <div class="submenu__item_projects">-->
-<!--          &lt;!&ndash;          <router-link&ndash;&gt;-->
-<!--          &lt;!&ndash;            to="/houses"&ndash;&gt;-->
-<!--          &lt;!&ndash;            class="submenu__item_projects-item"&ndash;&gt;-->
-<!--          &lt;!&ndash;          >&ndash;&gt;-->
-<!--          &lt;!&ndash;            Каталог домов&ndash;&gt;-->
-<!--          &lt;!&ndash;          </router-link>&ndash;&gt;-->
-<!--          <router-link-->
-<!--            to="/partners"-->
-<!--            class="submenu__item_projects-item"-->
-<!--          >-->
-<!--            Каталог домов-->
-<!--          </router-link>-->
-<!--          <router-link-->
-<!--            to="/baths"-->
-<!--            class="submenu__item_projects-item"-->
-<!--          >-->
-<!--            Каталог бань-->
-<!--          </router-link>-->
-<!--        </div>-->
+        <!--        <div class="submenu__item_projects">-->
+        <!--          &lt;!&ndash;          <router-link&ndash;&gt;-->
+        <!--          &lt;!&ndash;            to="/houses"&ndash;&gt;-->
+        <!--          &lt;!&ndash;            class="submenu__item_projects-item"&ndash;&gt;-->
+        <!--          &lt;!&ndash;          >&ndash;&gt;-->
+        <!--          &lt;!&ndash;            Каталог домов&ndash;&gt;-->
+        <!--          &lt;!&ndash;          </router-link>&ndash;&gt;-->
+        <!--          <router-link-->
+        <!--            to="/partners"-->
+        <!--            class="submenu__item_projects-item"-->
+        <!--          >-->
+        <!--            Каталог домов-->
+        <!--          </router-link>-->
+        <!--          <router-link-->
+        <!--            to="/baths"-->
+        <!--            class="submenu__item_projects-item"-->
+        <!--          >-->
+        <!--            Каталог бань-->
+        <!--          </router-link>-->
+        <!--        </div>-->
       </div>
       <div class="menu__item menu__item_builds">
         <router-link
-          to="/houses"
+          :to="{ name: 'housecat' }"
         >
           Строительство
         </router-link>
         <div class="submenu__item_builds">
           <router-link
-            to="/houses"
+            :to="{ name: 'housecat' }"
             class="submenu__item_builds-item"
           >
             Строительство домов под ключ
@@ -55,7 +55,7 @@
       </div>
       <div class="menu__item menu__item_services">
         <router-link
-          to="/services"
+          to="/borders"
         >
           Услуги
         </router-link>
@@ -72,18 +72,18 @@
           >
             Канализация и водоснабжение
           </router-link>
-          <router-link
-            to="/landscape"
-            class="submenu__item_services-item"
-          >
-            Ландшафтное проектирование
-          </router-link>
-          <router-link
-            to="/smarthouse"
-            class="submenu__item_services-item"
-          >
-            Умный дом
-          </router-link>
+<!--          <router-link-->
+<!--            to="/landscape"-->
+<!--            class="submenu__item_services-item"-->
+<!--          >-->
+<!--            Ландшафтное проектирование-->
+<!--          </router-link>-->
+<!--          <router-link-->
+<!--            to="/smarthouse"-->
+<!--            class="submenu__item_services-item"-->
+<!--          >-->
+<!--            Умный дом-->
+<!--          </router-link>-->
         </div>
       </div>
       <div class="menu__item menu__item_works">
@@ -153,7 +153,7 @@ export default {
   align-items: center;
 }
 
-.submenu__item_projects, .submenu__item_builds, .submenu__item_services, .submenu__item_about {
+.submenu__item_builds, .submenu__item_services, .submenu__item_about {
   position: absolute;
   top: 50px;
   display: flex;
@@ -169,7 +169,7 @@ export default {
   transition: all 150ms ease-in-out;
 }
 
-.submenu__item_projects-item, .submenu__item_builds-item, .submenu__item_services-item, .submenu__item_about-item {
+.submenu__item_builds-item, .submenu__item_services-item, .submenu__item_about-item {
   display: flex;
   align-items: center;
   height: 40px;
@@ -178,7 +178,7 @@ export default {
   border-bottom: 1px solid #f9f9f9;
 }
 
-.submenu__item_projects-item:last-child, .submenu__item_builds-item:last-child, .submenu__item_services-item:last-child, .submenu__item_about-item:last-child {
+.submenu__item_builds-item:last-child, .submenu__item_services-item:last-child, .submenu__item_about-item:last-child {
   border: none;
 }
 
@@ -197,15 +197,16 @@ export default {
     margin-left: 15px;
     padding: 5px;
     transition: all 0.5s ease;
+    margin-top: 10px;
   }
 
   a:hover {
-    color: #E1704B;
+    color: #722311;
     transition: all 0.2s ease;
   }
 
   a.router-link-exact-active {
-    color: #E1704B;
+    color: #722311;
   }
 
   .menu__item_projects:hover .submenu__item_projects {

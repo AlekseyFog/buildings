@@ -1,7 +1,7 @@
 {
   "version": "0.1.0",
-  "name": "buildings",
-  "description": "AMK-600 frontend",
+  "name": "domland",
+  "description": "DomLand build site",
   "icons": {
     "60": "/buildings/favicon/firefox_app_60x60.png",
     "128": "/buildings/favicon/firefox_app_128x128.png",

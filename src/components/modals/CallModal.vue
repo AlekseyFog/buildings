@@ -1,7 +1,9 @@
 <template>
   <div class="callmodal__wrapper">
     <div class="callmodal">
-      <h3 class="callmodal__header">Оставить заявку</h3>
+      <h3 class="callmodal__header">
+        Оставить заявку
+      </h3>
       <CloseButton
         class="close-button"
         @click="close_form"

@@ -4,9 +4,9 @@
       <p class="splash__text">
         Строительство загородных домов под ключ в Санкт-Петербурге
       </p>
-      <router-link to="houses">
+      <router-link to="/partners">
         <div class="splash__button">
-          Посмотреть проекты
+          Выбрать проект
         </div>
       </router-link>
     </div>
@@ -41,7 +41,7 @@ export default {
 .splash__text {
   margin-top: 30px;
   font-family: 'Raleway', sans-serif;
-  font-size: 20px;
+  font-size: 30px;
   color: #f9f9f9;
 }
 
@@ -50,14 +50,14 @@ export default {
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 0.2px solid #f9f9f9;
+  border: 1px solid #722311;
   border-radius: 10px;
   color: #f9f9f9;
-  background: rgba(240, 147, 54, 0.5);
+  background: rgba(114, 35, 17, 0.7);
   bottom: 10px;
   right: 25%;
   padding: 15px;
-  font-size: 15px;
+  font-size: 20px;
   width: 250px;
   height: 60px;
   transition: .6s;
@@ -96,7 +96,7 @@ export default {
   }
 
   &:hover {
-    background: #D24534;
+    background: #722311;
     cursor: pointer;
 
     &:before {
